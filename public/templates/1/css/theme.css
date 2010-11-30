@@ -1,0 +1,203 @@
+/*
+	Theme Name: My Resume
+	Theme URI: http://www.mycvapp.com
+	Description: Nice and Clean CV.
+	Version: 1.0
+	Author: Diego A. Peralta
+	Author URI: http://www.bahiastudio.net
+*/
+/*- Reset Styles -----------------------------------------------------------*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    line-height:1;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+	display:block;
+}
+nav ul {
+    list-style:none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+input, select {
+    vertical-align:middle;
+}
+ 
+/*- End of Reset Styles ----------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+
+/*- Template -----------------------------------------------------------*/
+
+body {
+	background:#FFF;
+	color:#868686;
+	font:12px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+:focus {
+	outline:0;
+}
+a {
+	color:#4f4f4f;
+	text-decoration:none;
+}
+a:hover {
+	color:#000;
+}
+h1, h2, h3, h4, h5, h6 {
+	color:#4f4f4f;
+	letter-spacing:-0.05em;
+}
+p {
+	margin:0 0 1.5em;
+}
+strong {
+	font-weight:800;
+}
+hr {
+	border-color:#EEE;
+	margin:2em 0;
+}
+#main {
+	margin:0 auto;
+	width:960px;
+}
+#header {
+	overflow:hidden;
+	padding:1.5em 0;
+}
+#header h1 {
+	font-size:32px;
+	margin:0 0 10px;
+}
+#header p {
+	font-size:22px;
+}
+.block {
+	border-bottom:1px solid #EEE;
+	overflow:hidden;
+	margin:0 0 1em;
+	padding:1em 0;
+}
+.profile_image {
+	float:left;
+	margin:0 10px 0 0;
+}
+.profile_image img {
+	width:90px;
+}
+.profile_description {
+	padding:20px 0 0;
+	float:left;
+}
+#container {
+	overflow:hidden;
+}
+.block-label {
+	float:left;
+	font-size:20px;
+	width:200px;
+}
+.block-description {
+	float:right;
+	width:710px;
+}
+.block-description h3 {
+	font-size:18px;
+}
+.block-description h3 span {
+	color:#999;
+	font-size:14px;
+	font-weight:400;
+}
+.block-description h4 {
+	color:#999;
+	font-size:14px;
+	font-weight:normal;
+	margin:0 0 1em;
+}
+.skills-list li {
+	display:block;
+	float:left;
+	list-style:none;
+	font-size:14px;
+	font-weight:bold;
+	text-transform:uppercase;
+	width:230px;
+}
+.skills-list li ul li {
+	float:none;
+	font-size:12px;
+	font-weight:normal;
+	padding:0 20px 0 0;
+	text-transform:none;
+	
+}
+/*- End of Template ----------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/

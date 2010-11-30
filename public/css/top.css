@@ -1,0 +1,42 @@
+.editable-mode {
+	padding:40px 0 0;
+}
+#top {
+	background:#DDD;
+	font:12px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	height:40px;
+	margin:0 0 1.5em 0;
+	position:fixed;
+	top:0;
+	width:100%;
+}
+
+#top ul {
+	margin:0;
+}
+
+#top .right {
+	padding:6px 10px 0 0;
+	float:right;
+}
+
+#top li {
+	display:block;
+	float:left;
+	padding:0 6px;
+}
+
+#top li a {
+	background:#999;
+	border-radius:18px;
+	color:#FFF;
+	font-size:11px;
+	display:block;
+	padding:5px 20px;
+	line-height:auto;
+	text-decoration:none;
+	text-transform:uppercase;
+	text-shadow:1px 1px #666;
+	-moz-border-radius:18px;
+	-webkit-border-radius:18px;
+}

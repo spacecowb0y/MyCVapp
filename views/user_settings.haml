@@ -1,0 +1,743 @@
+!!! Strict
+%html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %title MyCVapp: #{params[:username]}'s Profile
+    %link{:charset => "utf-8", :href => "/css/global.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    %script{:charset => "utf-8", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", :type => "text/javascript"}
+    %script{:charset => "utf-8", :src => "/js/validate.js", :type => "text/javascript"}
+    %script{:charset => "utf-8", :src => "/js/application.js", :type => "text/javascript"}
+    :javascript
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-5917265-20']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  %body
+    #header
+      %ul#navigation
+        %li 
+          Welcome back 
+          %strong #{@user.username}
+        %li
+          %a{:href => "/user/#{params[:id]}"} My Profile
+        %li
+          %a{:href => "/user/#{params[:id]}/settings"} Settings
+        %li
+          %a{:href => "/logout"} Logout
+      %h1#logo
+        %a{:href => "/", :title => ""} MyCVapp
+    / /header
+    #container
+      #user_settings
+        %h2 Your Settings
+        %form{:action => "/user/#{@user.id}/settings", :method => "post"}
+          %fieldset
+            %legend User Information
+            %p.first
+              %label{:for => "fullname"} Fullname
+              %input#fullname{:name => "fullname", :type => "text", :value => "#{@user.fullname}"}
+            %p
+              %label{:for => "email"} Email
+              %input#email{:name => "email", :type => "text", :value => "#{@user.email}"}
+            %p
+              %label{:for => "country"} Country
+              %select{:name => "country"}
+                %option{:value => "AF"}
+                  Afghanistan
+                %option{:value => "AX"}
+                  Åland Islands
+                %option{:value => "AL"}
+                  Albania
+                %option{:value => "DZ"}
+                  Algeria
+                %option{:value => "AS"}
+                  American Samoa
+                %option{:value => "AD"}
+                  Andorra
+                %option{:value => "AO"}
+                  Angola
+                %option{:value => "AI"}
+                  Anguilla
+                %option{:value => "AQ"}
+                  Antarctica
+                %option{:value => "AG"}
+                  Antigua and Barbuda
+                %option{:value => "AR"}
+                  Argentina
+                %option{:value => "AM"}
+                  Armenia
+                %option{:value => "AW"}
+                  Aruba
+                %option{:value => "AU"}
+                  Australia
+                %option{:value => "AT"}
+                  Austria
+                %option{:value => "AZ"}
+                  Azerbaijan
+                %option{:value => "BS"}
+                  Bahamas
+                %option{:value => "BH"}
+                  Bahrain
+                %option{:value => "BD"}
+                  Bangladesh
+                %option{:value => "BB"}
+                  Barbados
+                %option{:value => "BY"}
+                  Belarus
+                %option{:value => "BE"}
+                  Belgium
+                %option{:value => "BZ"}
+                  Belize
+                %option{:value => "BJ"}
+                  Benin
+                %option{:value => "BM"}
+                  Bermuda
+                %option{:value => "BT"}
+                  Bhutan
+                %option{:value => "BO"}
+                  Bolivia
+                %option{:value => "BA"}
+                  Bosnia and Herzegovina
+                %option{:value => "BW"}
+                  Botswana
+                %option{:value => "BV"}
+                  Bouvet Island
+                %option{:value => "BR"}
+                  Brazil
+                %option{:value => "IO"}
+                  British Indian Ocean Territory
+                %option{:value => "BN"}
+                  Brunei
+                %option{:value => "BG"}
+                  Bulgaria
+                %option{:value => "BF"}
+                  Burkina Faso
+                %option{:value => "BI"}
+                  Burundi
+                %option{:value => "KH"}
+                  Cambodia
+                %option{:value => "CM"}
+                  Cameroon
+                %option{:value => "CA"}
+                  Canada
+                %option{:value => "CV"}
+                  Cape Verde
+                %option{:value => "KY"}
+                  Cayman Islands
+                %option{:value => "CF"}
+                  Central African Republic
+                %option{:value => "TD"}
+                  Chad
+                %option{:value => "CL"}
+                  Chile
+                %option{:value => "CN"}
+                  China
+                %option{:value => "CX"}
+                  Christmas Island
+                %option{:value => "CC"}
+                  Cocos (Keeling) Islands
+                %option{:value => "CO"}
+                  Colombia
+                %option{:value => "KM"}
+                  Comoros
+                %option{:value => "CG"}
+                  Congo
+                %option{:value => "CD"}
+                  Congo (DRC)
+                %option{:value => "CK"}
+                  Cook Islands
+                %option{:value => "CR"}
+                  Costa Rica
+                %option{:value => "CI"}
+                  Côte d'Ivoire
+                %option{:value => "HR"}
+                  Croatia
+                %option{:value => "CU"}
+                  Cuba
+                %option{:value => "CY"}
+                  Cyprus
+                %option{:value => "CZ"}
+                  Czech Republic
+                %option{:value => "DK"}
+                  Denmark
+                %option{:value => "DJ"}
+                  Djibouti
+                %option{:value => "DM"}
+                  Dominica
+                %option{:value => "DO"}
+                  Dominican Republic
+                %option{:value => "EC"}
+                  Ecuador
+                %option{:value => "EG"}
+                  Egypt
+                %option{:value => "SV"}
+                  El Salvador
+                %option{:value => "GQ"}
+                  Equatorial Guinea
+                %option{:value => "ER"}
+                  Eritrea
+                %option{:value => "EE"}
+                  Estonia
+                %option{:value => "ET"}
+                  Ethiopia
+                %option{:value => "FK"}
+                  Falkland Islands (Islas Malvinas)
+                %option{:value => "FO"}
+                  Faroe Islands
+                %option{:value => "FJ"}
+                  Fiji Islands
+                %option{:value => "FI"}
+                  Finland
+                %option{:value => "FR"}
+                  France
+                %option{:value => "GF"}
+                  French Guiana
+                %option{:value => "PF"}
+                  French Polynesia
+                %option{:value => "TF"}
+                  French Southern and Antarctic Lands
+                %option{:value => "GA"}
+                  Gabon
+                %option{:value => "GM"}
+                  Gambia, The
+                %option{:value => "GE"}
+                  Georgia
+                %option{:value => "DE"}
+                  Germany
+                %option{:value => "GH"}
+                  Ghana
+                %option{:value => "GI"}
+                  Gibraltar
+                %option{:value => "GR"}
+                  Greece
+                %option{:value => "GL"}
+                  Greenland
+                %option{:value => "GD"}
+                  Grenada
+                %option{:value => "GP"}
+                  Guadeloupe
+                %option{:value => "GU"}
+                  Guam
+                %option{:value => "GT"}
+                  Guatemala
+                %option{:value => "GG"}
+                  Guernsey
+                %option{:value => "GN"}
+                  Guinea
+                %option{:value => "GW"}
+                  Guinea-Bissau
+                %option{:value => "GY"}
+                  Guyana
+                %option{:value => "HT"}
+                  Haiti
+                %option{:value => "HM"}
+                  Heard Island and McDonald Islands
+                %option{:value => "HN"}
+                  Honduras
+                %option{:value => "HK"}
+                  Hong Kong SAR
+                %option{:value => "HU"}
+                  Hungary
+                %option{:value => "IS"}
+                  Iceland
+                %option{:value => "IN"}
+                  India
+                %option{:value => "ID"}
+                  Indonesia
+                %option{:value => "IR"}
+                  Iran
+                %option{:value => "IQ"}
+                  Iraq
+                %option{:value => "IE"}
+                  Ireland
+                %option{:value => "IM"}
+                  Isle of Man
+                %option{:value => "IL"}
+                  Israel
+                %option{:value => "IT"}
+                  Italy
+                %option{:value => "JM"}
+                  Jamaica
+                %option{:value => "SJ"}
+                  Jan Mayen
+                %option{:value => "JP"}
+                  Japan
+                %option{:value => "JE"}
+                  Jersey
+                %option{:value => "JO"}
+                  Jordan
+                %option{:value => "KZ"}
+                  Kazakhstan
+                %option{:value => "KE"}
+                  Kenya
+                %option{:value => "KI"}
+                  Kiribati
+                %option{:value => "KR"}
+                  Korea
+                %option{:value => "KW"}
+                  Kuwait
+                %option{:value => "KG"}
+                  Kyrgyzstan
+                %option{:value => "LA"}
+                  Laos
+                %option{:value => "LV"}
+                  Latvia
+                %option{:value => "LB"}
+                  Lebanon
+                %option{:value => "LS"}
+                  Lesotho
+                %option{:value => "LR"}
+                  Liberia
+                %option{:value => "LY"}
+                  Libya
+                %option{:value => "LI"}
+                  Liechtenstein
+                %option{:value => "LT"}
+                  Lithuania
+                %option{:value => "LU"}
+                  Luxembourg
+                %option{:value => "MO"}
+                  Macao SAR
+                %option{:value => "MK"}
+                  Macedonia, Former Yugoslav Republic of
+                %option{:value => "MG"}
+                  Madagascar
+                %option{:value => "MW"}
+                  Malawi
+                %option{:value => "MY"}
+                  Malaysia
+                %option{:value => "MV"}
+                  Maldives
+                %option{:value => "ML"}
+                  Mali
+                %option{:value => "MT"}
+                  Malta
+                %option{:value => "MH"}
+                  Marshall Islands
+                %option{:value => "MQ"}
+                  Martinique
+                %option{:value => "MR"}
+                  Mauritania
+                %option{:value => "MU"}
+                  Mauritius
+                %option{:value => "YT"}
+                  Mayotte
+                %option{:value => "MX"}
+                  Mexico
+                %option{:value => "FM"}
+                  Micronesia
+                %option{:value => "MD"}
+                  Moldova
+                %option{:value => "MC"}
+                  Monaco
+                %option{:value => "MN"}
+                  Mongolia
+                %option{:value => "ME"}
+                  Montenegro
+                %option{:value => "MS"}
+                  Montserrat
+                %option{:value => "MA"}
+                  Morocco
+                %option{:value => "MZ"}
+                  Mozambique
+                %option{:value => "MM"}
+                  Myanmar
+                %option{:value => "NA"}
+                  Namibia
+                %option{:value => "NR"}
+                  Nauru
+                %option{:value => "NP"}
+                  Nepal
+                %option{:value => "NL"}
+                  Netherlands
+                %option{:value => "AN"}
+                  Netherlands Antilles
+                %option{:value => "NC"}
+                  New Caledonia
+                %option{:value => "NZ"}
+                  New Zealand
+                %option{:value => "NI"}
+                  Nicaragua
+                %option{:value => "NE"}
+                  Niger
+                %option{:value => "NG"}
+                  Nigeria
+                %option{:value => "NU"}
+                  Niue
+                %option{:value => "NF"}
+                  Norfolk Island
+                %option{:value => "KP"}
+                  North Korea
+                %option{:value => "MP"}
+                  Northern Mariana Islands
+                %option{:value => "NO"}
+                  Norway
+                %option{:value => "OM"}
+                  Oman
+                %option{:value => "PK"}
+                  Pakistan
+                %option{:value => "PW"}
+                  Palau
+                %option{:value => "PS"}
+                  Palestinian Authority
+                %option{:value => "PA"}
+                  Panama
+                %option{:value => "PG"}
+                  Papua New Guinea
+                %option{:value => "PY"}
+                  Paraguay
+                %option{:value => "PE"}
+                  Peru
+                %option{:value => "PH"}
+                  Philippines
+                %option{:value => "PN"}
+                  Pitcairn Islands
+                %option{:value => "PL"}
+                  Poland
+                %option{:value => "PT"}
+                  Portugal
+                %option{:value => "PR"}
+                  Puerto Rico
+                %option{:value => "QA"}
+                  Qatar
+                %option{:value => "RE"}
+                  Reunion
+                %option{:value => "RO"}
+                  Romania
+                %option{:value => "RU"}
+                  Russia
+                %option{:value => "RW"}
+                  Rwanda
+                %option{:value => "WS"}
+                  Samoa
+                %option{:value => "SM"}
+                  San Marino
+                %option{:value => "ST"}
+                  São Tomé and Príncipe
+                %option{:value => "SA"}
+                  Saudi Arabia
+                %option{:value => "SN"}
+                  Senegal
+                %option{:value => "RS"}
+                  Serbia
+                %option{:value => "SC"}
+                  Seychelles
+                %option{:value => "SL"}
+                  Sierra Leone
+                %option{:value => "SG"}
+                  Singapore
+                %option{:value => "SK"}
+                  Slovakia
+                %option{:value => "SI"}
+                  Slovenia
+                %option{:value => "SB"}
+                  Solomon Islands
+                %option{:value => "SO"}
+                  Somalia
+                %option{:value => "ZA"}
+                  South Africa
+                %option{:value => "GS"}
+                  South Georgia and the South Sandwich Islands
+                %option{:value => "ES"}
+                  Spain
+                %option{:value => "LK"}
+                  Sri Lanka
+                %option{:value => "BL"}
+                  St. Barthélemy
+                %option{:value => "SH"}
+                  St. Helena
+                %option{:value => "KN"}
+                  St. Kitts and Nevis
+                %option{:value => "LC"}
+                  St. Lucia
+                %option{:value => "MF"}
+                  St. Martin
+                %option{:value => "PM"}
+                  St. Pierre and Miquelon
+                %option{:value => "VC"}
+                  St. Vincent and the Grenadines
+                %option{:value => "SD"}
+                  Sudan
+                %option{:value => "SR"}
+                  Suriname
+                %option{:value => "SZ"}
+                  Swaziland
+                %option{:value => "SE"}
+                  Sweden
+                %option{:value => "CH"}
+                  Switzerland
+                %option{:value => "SY"}
+                  Syria
+                %option{:value => "TW"}
+                  Taiwan
+                %option{:value => "TJ"}
+                  Tajikistan
+                %option{:value => "TZ"}
+                  Tanzania
+                %option{:value => "TH"}
+                  Thailand
+                %option{:value => "TL"}
+                  Timor-Leste
+                %option{:value => "TG"}
+                  Togo
+                %option{:value => "TK"}
+                  Tokelau
+                %option{:value => "TO"}
+                  Tonga
+                %option{:value => "TT"}
+                  Trinidad and Tobago
+                %option{:value => "TN"}
+                  Tunisia
+                %option{:value => "TR"}
+                  Turkey
+                %option{:value => "TM"}
+                  Turkmenistan
+                %option{:value => "TC"}
+                  Turks and Caicos Islands
+                %option{:value => "TV"}
+                  Tuvalu
+                %option{:value => "UG"}
+                  Uganda
+                %option{:value => "UA"}
+                  Ukraine
+                %option{:value => "AE"}
+                  United Arab Emirates
+                %option{:value => "UK"}
+                  United Kingdom
+                %option{:value => "US"}
+                  United States
+                %option{:value => "UM"}
+                  United States Minor Outlying Islands
+                %option{:value => "UY"}
+                  Uruguay
+                %option{:value => "UZ"}
+                  Uzbekistan
+                %option{:value => "VU"}
+                  Vanuatu
+                %option{:value => "VA"}
+                  Vatican City
+                %option{:value => "VE"}
+                  Venezuela
+                %option{:value => "VN"}
+                  Vietnam
+                %option{:value => "VG"}
+                  Virgin Islands, British
+                %option{:value => "VI"}
+                  Virgin Islands, U.S.
+                %option{:value => "WF"}
+                  Wallis and Futuna
+                %option{:value => "YE"}
+                  Yemen
+                %option{:value => "ZM"}
+                  Zambia
+                %option{:value => "ZW"}
+                  Zimbabwe
+            %p
+              %label{:for => "gender"} I'm
+              %select{:name => "gender"}
+                %option{:value => ""}
+                  Select Sex
+                %option{:value => "Female"}
+                  Female
+                %option{:value => "Male"}
+                  Male
+            %p
+              %label{:for => "birthday"} Birthday
+              %select{:name => "month"}
+                %option{:value => ""} Month
+                %option{:value => "1"} Jan
+                %option{:value => "2"} Feb
+                %option{:value => "3"} Mar
+                %option{:value => "4"} Apr
+                %option{:value => "5"} May
+                %option{:value => "6"} Jun
+                %option{:value => "7"} Jul
+                %option{:value => "8"} Aug
+                %option{:value => "9"} Sep
+                %option{:value => "10"} Oct
+                %option{:value => "11"} Nov
+                %option{:value => "12"} Dec
+              %select{:name => "day"}
+                %option{:value => ""} Day
+                %option{:value => "1"} 1
+                %option{:value => "2"} 2
+                %option{:value => "3"} 3
+                %option{:value => "4"} 4
+                %option{:value => "5"} 5
+                %option{:value => "6"} 6
+                %option{:value => "7"} 7
+                %option{:value => "8"} 8
+                %option{:value => "9"} 9
+                %option{:value => "10"} 10
+                %option{:value => "11"} 11
+                %option{:value => "12"} 12
+                %option{:value => "13"} 13
+                %option{:value => "14"} 14
+                %option{:value => "15"} 15
+                %option{:value => "16"} 16
+                %option{:value => "17"} 17
+                %option{:value => "18"} 18
+                %option{:value => "19"} 19
+                %option{:value => "20"} 20
+                %option{:value => "21"} 21
+                %option{:value => "22"} 22
+                %option{:value => "23"} 23
+                %option{:value => "24"} 24
+                %option{:value => "25"} 25
+                %option{:value => "26"} 26
+                %option{:value => "27"} 27
+                %option{:value => "28"} 28
+                %option{:value => "29"} 29
+                %option{:value => "30"} 30
+                %option{:value => "31"} 31
+              %select{:name => "year"}
+                %option{:value => ""} Year
+                %option{:value => "2010"} 2010
+                %option{:value => "2009"} 2009
+                %option{:value => "2008"} 2008
+                %option{:value => "2007"} 2007
+                %option{:value => "2006"} 2006
+                %option{:value => "2005"} 2005
+                %option{:value => "2004"} 2004
+                %option{:value => "2003"} 2003
+                %option{:value => "2002"} 2002
+                %option{:value => "2001"} 2001
+                %option{:value => "2000"} 2000
+                %option{:value => "1999"} 1999
+                %option{:value => "1998"} 1998
+                %option{:value => "1997"} 1997
+                %option{:value => "1996"} 1996
+                %option{:value => "1995"} 1995
+                %option{:value => "1994"} 1994
+                %option{:value => "1993"} 1993
+                %option{:value => "1992"} 1992
+                %option{:value => "1991"} 1991
+                %option{:value => "1990"} 1990
+                %option{:value => "1989"} 1989
+                %option{:value => "1988"} 1988
+                %option{:value => "1987"} 1987
+                %option{:value => "1986"} 1986
+                %option{:value => "1985"} 1985
+                %option{:value => "1984"} 1984
+                %option{:value => "1983"} 1983
+                %option{:value => "1982"} 1982
+                %option{:value => "1981"} 1981
+                %option{:value => "1980"} 1980
+                %option{:value => "1979"} 1979
+                %option{:value => "1978"} 1978
+                %option{:value => "1977"} 1977
+                %option{:value => "1976"} 1976
+                %option{:value => "1975"} 1975
+                %option{:value => "1974"} 1974
+                %option{:value => "1973"} 1973
+                %option{:value => "1972"} 1972
+                %option{:value => "1971"} 1971
+                %option{:value => "1970"} 1970
+                %option{:value => "1969"} 1969
+                %option{:value => "1968"} 1968
+                %option{:value => "1967"} 1967
+                %option{:value => "1966"} 1966
+                %option{:value => "1965"} 1965
+                %option{:value => "1964"} 1964
+                %option{:value => "1963"} 1963
+                %option{:value => "1962"} 1962
+                %option{:value => "1961"} 1961
+                %option{:value => "1960"} 1960
+                %option{:value => "1959"} 1959
+                %option{:value => "1958"} 1958
+                %option{:value => "1957"} 1957
+                %option{:value => "1956"} 1956
+                %option{:value => "1955"} 1955
+                %option{:value => "1954"} 1954
+                %option{:value => "1953"} 1953
+                %option{:value => "1952"} 1952
+                %option{:value => "1951"} 1951
+                %option{:value => "1950"} 1950
+                %option{:value => "1949"} 1949
+                %option{:value => "1948"} 1948
+                %option{:value => "1947"} 1947
+                %option{:value => "1946"} 1946
+                %option{:value => "1945"} 1945
+                %option{:value => "1944"} 1944
+                %option{:value => "1943"} 1943
+                %option{:value => "1942"} 1942
+                %option{:value => "1941"} 1941
+                %option{:value => "1940"} 1940
+                %option{:value => "1939"} 1939
+                %option{:value => "1938"} 1938
+                %option{:value => "1937"} 1937
+                %option{:value => "1936"} 1936
+                %option{:value => "1935"} 1935
+                %option{:value => "1934"} 1934
+                %option{:value => "1933"} 1933
+                %option{:value => "1932"} 1932
+                %option{:value => "1931"} 1931
+                %option{:value => "1930"} 1930
+                %option{:value => "1929"} 1929
+                %option{:value => "1928"} 1928
+                %option{:value => "1927"} 1927
+                %option{:value => "1926"} 1926
+                %option{:value => "1925"} 1925
+                %option{:value => "1924"} 1924
+                %option{:value => "1923"} 1923
+                %option{:value => "1922"} 1922
+                %option{:value => "1921"} 1921
+                %option{:value => "1920"} 1920
+                %option{:value => "1919"} 1919
+                %option{:value => "1918"} 1918
+                %option{:value => "1917"} 1917
+                %option{:value => "1916"} 1916
+                %option{:value => "1915"} 1915
+                %option{:value => "1914"} 1914
+                %option{:value => "1913"} 1913
+                %option{:value => "1912"} 1912
+                %option{:value => "1911"} 1911
+                %option{:value => "1910"} 1910
+                %option{:value => "1909"} 1909
+                %option{:value => "1908"} 1908
+                %option{:value => "1907"} 1907
+                %option{:value => "1906"} 1906
+                %option{:value => "1905"} 1905
+            %p
+              %label{:for => "website"} Website
+              %input#website{:name => "website", :type => "text", :value => "#{@user.website}"}/
+            %p
+              %label{:for => "twitter_username"} Twitter Username
+              %input#twitter_account{:name => "twitter_username", :type => "text", :value => "#{@user.twitter_username}"}/
+            %p.last
+              %label{:for => "facebook_username"} Facebook Username
+              %input#facebook_account{:name => "facebook_username", :type => "text", :value => "#{@user.facebook_username}"}/
+          %fieldset.last
+            %legend Account Information
+            %p.first
+              %label{:for => "username"} Username
+              %input#username{:name => "username", :type => "text", :value => "diego_ar", :disabled => "disabled"}/
+            %p
+              %label{:for => "password"} Password
+              %input#password{:name => "password", :type => "password", :value => ""}/
+            %p.last
+              %label{:for => "confirm_password"} Confirm Password
+              %input#confirm_password{:name => "confirm_password", :type => "password", :value => ""}/
+          %p.last
+            %button{:type => "Submit"} Update your profile
+    #footer
+      %ul
+        %li
+          %strong Get in touch:
+          %a{:href => "mailto:hi@mycvapp.com", :title => "Get In Touch"} hi@mycvapp.com
+          \/
+          %a{:href => "http://www.twitter.com/mycvapp", :title => "Follow us on Twitter!"} @mycvapp
+        %li
+          %strong Get Started:
+          %a{:href => "/signup", :title => "Sign Up"} Sign Up
+          \/
+          %a{:href => "/login", :title => "Login"} Log In
+        %li
+          Copyright © 2010 mycvapp - All Rights Reserved. Hosted by
+          %a{:href => "http://www.heroku.com", :title => "Hosted by Heroku"} Heroku
+    / /footer

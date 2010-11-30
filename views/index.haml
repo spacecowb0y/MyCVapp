@@ -1,0 +1,122 @@
+!!! Strict
+%html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %title MyCVapp
+    %link{:charset => "utf-8", :href => "/css/global.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    %script{:charset => "utf-8", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", :type => "text/javascript"}
+    %script{:charset => "utf-8", :src => "/js/validate.js", :type => "text/javascript"}
+    %script{:charset => "utf-8", :src => "/js/application.js", :type => "text/javascript"}
+    :javascript
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-5917265-20']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  %body
+    #header
+      %h2#mycvapp_counter
+        we created
+        %strong 5,875,214
+        resumes today
+      %h1#logo
+        %a{:href => "/", :title => ""} MyCVapp
+    / /header
+    #featured
+      #featured_holder
+        #description
+          %h3 Easy, super fast and free!
+          %p
+            With MyCVapp you can create your resume online in 3 minutes or less! It's so simple to use, it's fun, it's fast and the best part
+            = succeed "!" do
+              %strong  it's completly free 
+          %p
+            %a#signup{:href => "/signup", :title => "Sign in up for mycvapp"}
+              Sign in up for mycvapp
+              %small Sign in up for mycvapp and get your resume online in 3 minutes
+        / /description
+        #image
+          %img{:alt => "MyCVapp", :src => "/images/featured_home.png"}/
+        / /image
+      / /featured_holder
+    / /featured
+    #about
+      %dl#what_is
+        %dt
+          what is
+          = succeed "app?" do
+            %strong mycv
+        %dd MyCVapp it's a open-source online tool to easy create your resume, export it to PDF or share it with your friends on Facebook or Twitter.
+      %dl#who_uses
+        %dt
+          who uses
+          = succeed "pp?" do
+            %strong mycva
+        %dd Everybody! If you need to create your resume, MyCVapp it's the best online tool to do it. It's simple, fun and so fast!
+      %dl#how_much.last
+        %dt
+          how much cost
+          = succeed "app?" do
+            %strong mycv
+        %dd MyCVapp it's completly free! You don't need to pay anything! The only thing that you need to do it's sign up and thats it!
+    / /about
+    #content
+      #screenshots
+        .box
+          %a{:href => ""}
+            %img{:alt => "", :src => "/images/screenshots/1.jpg"}/
+            %strong Beautiful and clean UI
+        / /box
+        .box
+          %a{:href => ""}
+            %img{:alt => "", :src => "/images/screenshots/1.jpg"}/
+            %strong Easy method to update info
+        / /box
+        .box.last
+          %a{:href => ""}
+            %img{:alt => "", :src => "/images/screenshots/1.jpg"}/
+            %strong Export or share your CV
+        / /box
+      / /screenshots
+      #testimonials
+        %ul
+          %li
+            %cite
+              %span "
+              Before Akismet I was spending more time deleting spam than creating content.
+              %span "
+            %strong - Sarah King
+          %li
+            %cite
+              %span "
+              Before Akismet I was spending more time deleting spam than creating content.
+              %span "
+            %strong - Sarah King
+          %li
+            %cite
+              %span "
+              Before Akismet I was spending more time deleting spam than creating content.
+              %span "
+            %strong - Sarah King
+      / /testimonials
+    / /content
+    #footer
+      %ul
+        %li
+          %strong Get in touch:
+          %a{:href => "mailto:hi@mycvapp.com", :title => "Get In Touch"} hi@mycvapp.com
+          \/
+          %a{:href => "http://www.twitter.com/mycvapp", :title => "Follow us on Twitter!"} @mycvapp
+        %li
+          %strong Get Started:
+          %a{:href => "/signup", :title => "Sign Up"} Sign Up
+          \/
+          %a{:href => "/login", :title => "Login"} Log In
+        %li
+          Copyright © 2010 mycvapp - All Rights Reserved. Hosted by
+          %a{:href => "http://www.heroku.com", :title => "Hosted by Heroku"} Heroku
+    / /footer

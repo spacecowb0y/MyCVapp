@@ -1,0 +1,572 @@
+/*- Reset Styles -----------------------------------------------------------*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    line-height:1;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+	display:block;
+}
+nav ul {
+    list-style:none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+input, select {
+    vertical-align:middle;
+}
+ 
+/*- End of Reset Styles ----------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+
+/*- General Styles -----------------------------------------------------------*/
+
+body {
+	background:#FFF;
+	color:#868686;
+	font:12px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body.editor-mode {
+	padding:40px 0 0;
+}
+:focus {
+	outline:0;
+}
+a {
+	color:#4f4f4f;
+	text-decoration:none;
+}
+a:hover {
+	color:#000;
+}
+h1, h2, h3, h4, h5, h6 {
+	color:#4f4f4f;
+	letter-spacing:-0.05em;
+}
+p {
+	margin:0 0 1.5em;
+}
+button {
+	background:url("../images/btn-shader.png") repeat-x scroll 0 100% #FFFFFF;
+	border-color:#D4D4D4 #B4B4B4 #B4B4B4 #D4D4D4;
+	border-right:1px solid #B4B4B4;
+	border-radius:3px;
+	border-style:solid;
+	border-width:1px;
+	color:#555555;
+	cursor:pointer;
+	display:inline-block;
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:11px;
+	font-style:normal;
+	font-weight:bold;
+	line-height:100%;
+	min-width:55px;
+	margin:0 5px 0 0;
+	padding:4px 12px;
+	text-align:center;
+	text-decoration:none;
+	text-shadow:0 1px rgba(255, 255, 255, 0.75);
+	text-transform:uppercase;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+
+strong {
+	font-weight:800;
+}
+/*- Layout -*/
+#header, #featured_holder, #about, #container, #content, #footer {
+	margin:0 auto;
+	width:960px;
+}
+
+/*------------------------------*/
+/* HEADER 						*/
+/*------------------------------*/
+#header {
+	line-height:124px;
+	height:124px;
+}
+#header #logo {
+	height:46px;
+	padding:40px 0 0;
+	width:213px;
+}
+#header #logo a {
+	background:url('../images/logo.gif') no-repeat left top;
+	display:block;
+	height:46px;
+	text-indent:-9999em;
+}
+#header #mycvapp_counter {
+	float:right;
+	font-size:24px;
+	font-weight:200;
+}
+#header #mycvapp_counter strong {
+	font-weight:800;
+}
+
+/*------------------------------*/
+/* NAVIGATION 					*/
+/*------------------------------*/
+#navigation {
+	float:right;
+}
+#navigation li {
+	border-right:1px solid #EEE;
+	display:inline;
+	list-style:none;
+	padding:0 10px;
+}
+
+#navigation li:last-child {
+	border:0;
+	padding-right:0;
+}
+
+/*------------------------------*/
+/* FEATURED 					*/
+/*------------------------------*/
+#featured {
+	background:#f5f5f5;
+	border-top:1px solid #f1f1f1;
+	border-bottom:1px solid #f1f1f1;
+	padding:30px 0;
+}
+#featured_holder {
+	position:relative;
+}
+#featured #description {
+	width:350px;
+}
+#featured #image {
+	position:absolute;
+	right:0;
+	top:-55px;
+}
+#featured h3 {
+	font-size:26px;
+	font-weight:800;
+	margin:0 0 0.5em;
+}
+#featured p a#signup {
+	background:url('../images/home-sign-up.gif') no-repeat left top;
+	display:block;
+	height:61px;
+	margin:0 auto;
+	text-indent:-9999em;
+	width:241px;
+}
+
+/*------------------------------*/
+/* ABOUT 						*/
+/*------------------------------*/
+#about {
+	background:url('../images/dots.gif') repeat-x left bottom;
+	overflow:hidden;
+	padding:40px 0;
+}
+#about dl {
+	float:left;
+	margin:0 18px 0 0;
+	padding:5px 0 0 38px;
+	width:270px;
+}
+#about dl.last {
+	margin:0;
+}
+#about dl dt { 
+	color:#4f4f4f;
+	letter-spacing:-0.05em;
+	font-size:24px;
+	margin:0 0 0.5em;
+}
+#about dl dt strong {
+	font-weight:800;
+}
+
+/*- Heading numbers -*/
+#what_is  {
+	background:url('../images/1.gif') no-repeat left top;
+}
+#who_uses  {
+	background:url('../images/2.gif') no-repeat left top;
+}
+#how_much  {
+	background:url('../images/3.gif') no-repeat left top;
+}
+
+/*------------------------------*/
+/* CONTENT 						*/
+/*------------------------------*/
+#content {
+	overflow:hidden;
+	padding:40px 0;
+}
+
+/*- Screenshots -*/
+#screenshots {
+	float:left;
+	overflow:hidden;
+	width:620px;
+}
+#screenshots .box {
+	background:url('../images/zoom.png') no-repeat center 35px;
+	float:left;
+	margin:0 65px 0 0;
+}
+#screenshots .box.last {
+	margin:0;
+}
+#screenshots a strong {
+	display:block;
+	margin:0.4em 0 0;
+}
+
+/*- Testimonials -*/
+#testimonials {
+	float:right;
+	width:300px;
+}
+
+#testimonials ul {
+	width:260px;
+}
+#testimonials ul li {
+	list-style:none;
+	margin:0 0 1.5em;
+	text-align:right;
+}
+#testimonials ul li:last-child { 
+	margin:0;
+}
+#testimonials ul li cite {
+	display:block;
+}
+#testimonials ul li cite span {
+	color:#4f4f4f;
+	font-size:24px;
+	font-style:normal;
+	font-family:"Trebuchet MS";
+	vertical-align:middle;
+}
+
+/*------------------------------*/
+/* FORM							*/
+/*------------------------------*/
+.join {
+	margin:0 auto 5em auto;
+	width:500px;
+}
+.join h2 {
+	font-size:24px;
+	font-weight:200;
+	margin:0 0 0.2em;
+}
+.join h2 strong {
+	font-weight:800;
+}
+.join p {
+	margin:0 0 1em;
+}
+.join form {
+	background:#F5F5F5;
+	border-radius:5px;
+	padding:1.5em 0;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+.join form p span {
+	background:#edeaea;
+	border-radius:4px;
+	display:inline-block;
+	padding:4px;
+	width:360px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+}
+.join form input[type="text"], 
+.join form input[type="password"] {
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border:1px solid #dedede;
+	padding:10px;
+	width:338px;
+}
+.join form p span.error {
+	background:#d65353;
+}
+.join form input[type="text"].error, 
+.join form input[type="password"].error {
+	border-color:#f37070;
+}
+.join form p {
+	padding:1.5em;
+	margin:0;
+	border-bottom:1px solid #edeaea;
+}
+.join  form p.first {
+	padding:0 1.5em 1.5em 1.5em;
+}
+.join  form p.last {
+	border:0;
+	padding:1.5em 1.5em 0 1.5em;
+}
+.join form p label {
+	display:inline-block;
+	font-weight:bold;
+	margin:0 10px 0 0;
+	width:80px;
+}
+.join form a {
+	font-size:11px;
+	margin:0 0 0 5px;
+}
+
+label.error { display:none !important; }
+
+/*------------------------------*/
+/* LOGIN						*/
+/*------------------------------*/
+#login form input[type="password"] {
+	width:210px;
+}
+#login form p small {
+	float:right;
+}
+#login form p small label {
+	display:inline;
+	font-size:11px;
+	font-weight:normal;
+	margin:0;
+}
+
+/*------------------------------*/
+/* SIGN UP 						*/
+/*------------------------------*/
+#signup #username {
+	width:210px;
+}
+
+#signup form p span small {
+	font-size:11px;
+	margin:0 0 0 5px;
+}
+
+/*------------------------------*/
+/* CONTAINER 					*/
+/*------------------------------*/
+#container h2 {
+	border-bottom:1px solid #EEE;
+	font-size:24px;
+	padding:0 0 0.5em;
+	margin:0 0 1.5em;
+}
+
+/*------------------------------*/
+/* PROFILE PAGE 				*/
+/*------------------------------*/
+#profile_header { 
+	overflow:hidden;
+	margin:0 0 1.5em;
+	padding:0 0 0.5em;
+}
+
+#profile_header #profile_image {
+	float:left;
+}
+
+#profile_header #profile_image {
+	margin:0 10px 0 0;
+}
+
+#profile_header #profile_image img {
+	border:1px solid #DDD;
+	padding:2px;
+}
+
+#profile_header #profile_details {
+	float:left;
+}
+
+#profile_header #profile_details h4 {
+	font-size:20px;
+	margin:0 0 10px;
+}
+
+#profile_header #profile_details p {
+	line-height:1.4em;
+	font-size:11px;
+	padding:0;
+	margin:0;
+}
+
+#profile_header #profile_details p a { margin:0 8px 0 0; }
+
+#profile_header #profile_details p a.twitter {
+	background:url('../images/twitter.png') no-repeat left center;
+	padding:2px 0 2px 18px;
+}
+
+#profile_header #profile_details p a.facebook {
+	background:url('../images/facebook.png') no-repeat left center;
+	padding:2px 0 2px 18px;
+}
+
+/*------------------------------*/
+/* SETTINGS PAGE 				*/
+/*------------------------------*/
+#user_settings {
+	overflow:hidden;
+	margin:0 0 1.5em;
+}
+#user_settings form fieldset {
+	border:1px solid #EEE;
+	margin:0 1em 1em 0;
+	padding:20px 10px;
+	width:47%;
+	float:left;
+}
+#user_settings form fieldset.last {
+	margin:0 0 1em;
+}
+#user_settings form fieldset legend {
+	font-weight:800;
+	padding:0 10px;
+	text-transform:uppercase;
+}
+#user_settings form p {
+	border-bottom:1px solid #EEE;
+	overflow:hidden;
+	margin:0.65em 0;
+	padding:0.65em 0;
+}
+#user_settings form p.first {
+	margin-top:0;
+	padding-top:0;
+}
+#user_settings form p.last {
+	border:0;
+	clear:both;
+	margin-bottom:0;
+	padding-bottom:0;
+}
+#user_settings form p label {
+	color:#999;
+	display:block;
+	float:left;
+	font-weight:bold;
+	text-align:right;
+	margin:0 20px 0 0;
+	width:110px;
+}
+
+#user_settings form p input {
+	border-color:#C4C4C4 #E4E4E4 #E4E4E4 #C4C4C4;
+	border-right:1px solid #E4E4E4;
+	border-style:solid;
+	border-width:1px;
+	color:#333333;
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding:6px;
+	width:200px;
+}
+
+/*------------------------------*/
+/* FOOTER 						*/
+/*------------------------------*/
+#footer {
+	background:url('../images/dots.gif') repeat-x left top;
+	padding:1.5em 0;
+}
+#footer ul li {
+	list-style:none;
+}
+#footer ul li strong { 
+	display:inline-block;
+	font-weight:800; 
+	width:80px;}
+	
+#footer ul li a {
+	text-decoration:underline;
+}
+
+.info {
+	background-color:#EDEFF4;
+	border:1px solid #D4DAE8;
+	font-size:11px;
+	margin:-1.5em 0 4em;
+	padding:8px;
+}
+
+/*- End of General Styles ----------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/

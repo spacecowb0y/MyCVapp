@@ -1,0 +1,92 @@
+!!! Strict
+%html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %title MyCVapp: Diego's Resume
+    %link{:charset => "utf-8", :href => "/css/top.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    %link{:charset => "utf-8", :href => "/templates/1/css/theme.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+  %body.editable-mode
+    #top
+      %ul.right
+        %li
+          %a{:href => "", :title => ""} Save + Close
+        %li
+          %a{:href => "", :title => ""} Save
+        %li
+          %a{:href => "", :title => ""} Cancel
+    #main
+      #header
+        .profile_image
+          %img{:alt => "", :src => "http://a1.twimg.com/profile_images/1121793305/IMG_0834_reasonably_small.jpg"}/
+        / /profile_image
+        .profile_description
+          %h1 Diego A. Peralta
+          %p Web Developer
+        / /profile_description
+      / /header
+      .container
+        .block
+          .block-label
+            %h6 Professional Profile
+          / /block-label
+          .block-description
+            %p
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+          / /block-description
+        / /block
+        .block
+          .block-label
+            %h6 Work Experience
+          / /block-label
+          .block-description
+            %h3 
+              Senior Project Manager
+              %span (1995 -2005)
+            %h4 Web Design Studios, Full-Time
+            %p
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+            %hr
+            %h3 
+              Front End Developer
+              %span (1990 -1995)
+            %h4 Web Acme Advertising, Full-Time
+            %p
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+            %hr
+            %h3 
+              Back End Developer
+              %span (1985 -1990)
+            %h4 Web Design Studios, Full-Time
+            %p
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+          / /block-description
+        / /block
+        .block
+          .block-label
+            %h6 Skills
+          / /block-label
+          .block-description
+            %ul.skills-list
+              %li
+                Design
+                %ul
+                  %li Graphic design
+                  %li Web design
+              %li
+                Programming
+                %ul
+                  %li XHTML/CSS
+                  %li JavaScript
+                  %li PHP
+                  %li Ruby
+              %li 
+                Software
+                %ul
+                  %li Adobe Photoshop
+                  %li Textmate
+                  %li Git
+                  %li SVN
+          / /block-description
+        / /block
+      / /container
+    / /main
