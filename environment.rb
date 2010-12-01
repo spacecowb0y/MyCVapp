@@ -1,1 +1,1 @@
-require 'db/config'
+load "#{Dir.pwd}/db/config.rb"

@@ -10,8 +10,11 @@ gem 'dm-sqlite-adapter'
 gem 'shotgun'
 gem 'thor'
 
-
-gem 'hirb'
-
-# Heroku uses postgres
-gem 'dm-postgres-adapter'
+# If you get some errors about installing the postgres adapter, do:
+#
+#   bundle install --without postgre
+#
+group :postgre do
+  # Heroku uses postgres
+  gem 'dm-postgres-adapter'
+end
