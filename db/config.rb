@@ -2,7 +2,7 @@ require 'dm-core'
 require 'dm-migrations'
 require 'dm-validations'
 
-DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/db/test.db")
+DataMapper::setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/db/test.db")
 
 class User
   include DataMapper::Resource
