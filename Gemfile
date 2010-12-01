@@ -5,9 +5,11 @@ gem 'gravatar'
 gem 'dm-core'
 gem 'dm-migrations'
 gem 'dm-validations'
+gem 'dm-timestamps'
 gem 'dm-sqlite-adapter'
 gem 'shotgun'
 gem 'thor'
+
 
 gem 'hirb'
 

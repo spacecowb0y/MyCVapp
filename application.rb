@@ -17,7 +17,7 @@ get '/signup' do
 end
 
 post '/signup' do
-  @user = User.new(:email=> params[:email], :password => params[:password], :username => params[:username], :created_at => Time.now)
+  @user = User.new(params[:user])
   if @user.save
     redirect "/user/#{@user.id}"
   else
@@ -59,6 +59,6 @@ end
 
 post '/user/:id/settings' do
    @user = User.get(params[:id])
-   @user.update(:fullname => params[:fullname], :email => params[:email], :country => params[:country], :gender => params[:gender], :website => params[:website], :twitter_username => params[:twitter_username], :facebook_username => params[:facebook_username])
+   @user.update(params[:user])
    redirect "/user/#{@user.id}"
 end

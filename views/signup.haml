@@ -39,15 +39,15 @@
           %p.first
             %label{:for => "email"} Email
             %span
-              %input#email.required.email{:name => "email", :type => "text", :value => ""}/
+              %input#email.required.email{:name => "user[email]", :type => "text", :value => ""}/
           %p
             %label{:for => "password"} Password
             %span
-              %input#password.required{:name => "password", :type => "password", :value => ""}/
+              %input#password.required{:name => "user[password]", :type => "password", :value => ""}/
           %p
             %label{:for => "username"} Username
             %span
-              %input#username.required{:name => "username", :type => "text", :value => ""}/
+              %input#username.required{:name => "user[username]", :type => "text", :value => ""}/
               %small Your public name
           %p.last
             %button{:type => "submit"} Sign Up

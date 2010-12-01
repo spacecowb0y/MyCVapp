@@ -1,6 +1,7 @@
 require 'dm-core'
 require 'dm-migrations'
 require 'dm-validations'
+require 'dm-timestamps'
 
 DataMapper::setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/db/test.db")
 
@@ -18,11 +19,14 @@ class User
   property :twitter_username,   String
   property :facebook_username,  String
   property :created_at,         DateTime
+  property :updated_at,         DateTime
 end
 
 class Resume
   include DataMapper::Resource
   property :id,                 Serial
+  property :created_at,         DateTime
+  property :updated_at,         DateTime
 end
 
 DataMapper.finalize
