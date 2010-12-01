@@ -18,13 +18,12 @@ class User
   property :twitter_username,   String
   property :facebook_username,  String
   property :created_at,         DateTime
-  DataMapper.finalize
-  #DataMapper.auto_migrate!
-  DataMapper.auto_upgrade!
 end
 
 class Resume
   include DataMapper::Resource
   property :id,                 Serial
-  DataMapper.finalize
 end
+
+DataMapper.finalize
+DataMapper.auto_upgrade!
