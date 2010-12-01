@@ -27,6 +27,7 @@ GEM
     extlib (0.9.15)
     gravatar (1.0)
     haml (3.0.23)
+    hirb (0.3.4)
     rack (1.2.1)
     shotgun (0.8)
       rack (>= 1.0)
@@ -47,6 +48,7 @@ DEPENDENCIES
   dm-validations
   gravatar
   haml (= 3.0.23)
+  hirb
   shotgun
   sinatra (= 1.1.0)
   thor

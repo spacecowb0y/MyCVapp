@@ -21,3 +21,10 @@ Need to change port number? Easy:
   `thor app:server 8080`
 
 Now it will run on port 8080.
+
+Need to hack in the console?
+============================
+
+Just type:
+
+  `thor app:console`

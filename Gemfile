@@ -9,5 +9,7 @@ gem 'dm-sqlite-adapter'
 gem 'shotgun'
 gem 'thor'
 
+gem 'hirb'
+
 # Heroku uses postgres
 gem 'dm-postgres-adapter'

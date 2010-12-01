@@ -3,7 +3,7 @@ require 'sinatra'
 require 'haml'
 require 'gravatar'
 
-load 'db/config.rb'
+require 'environment'
 
 get '/' do
   haml :index
