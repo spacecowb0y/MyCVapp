@@ -6,6 +6,8 @@ gem 'dm-core'
 gem 'dm-migrations'
 gem 'dm-validations'
 gem 'dm-sqlite-adapter'
+gem 'shotgun'
+gem 'thor'
 
 # Heroku uses postgres
 gem 'dm-postgres-adapter'
