@@ -23,7 +23,7 @@
       %ul#navigation
         %li 
           Welcome back 
-          %strong #{params[:username]}
+          %strong #{@user.username}
         %li
           %a{:href => "/user/#{params[:id]}"} My Profile
         %li

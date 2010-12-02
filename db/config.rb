@@ -10,7 +10,7 @@ class User
   property :id,                 Serial
   property :email,              String, :required => true, :unique => true, :format => :email_address
   property :password,           String, :required => true
-  property :username,           String, :required => true, :unique => true, :length => 1..30
+  property :username,           String, :required => true, :unique => true, :length => 32
   property :fullname,           String
   property :country,            String
   property :birthday,           String

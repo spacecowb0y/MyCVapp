@@ -2,10 +2,14 @@ require 'rubygems'
 require 'sinatra'
 require 'haml'
 require 'gravatar'
+require 'digest/md5'
 
 load 'environment.rb'
 
+enable :sessions
+
 get '/' do
+  @counter = Resume.count
   haml :index
 end
 
@@ -19,6 +23,7 @@ end
 post '/signup' do
   @user = User.new(params[:user])
   if @user.save
+    @user.update(:password => Digest::MD5.hexdigest(@user.password))
     redirect "/user/#{@user.id}"
   else
     redirect '/'
@@ -29,11 +34,17 @@ end
 # LOGIN
 #
 get '/login' do
-  haml :login
+    haml :login
 end
 
 post '/login' do
-   haml :user_profile
+  @user = User.first(:username => params[:username], :password => Digest::MD5.hexdigest(params[:password]))
+  if @user
+    session[:logged] = @user.username
+    redirect "/user/#{@user.id}"
+  else
+    haml :login
+  end
 end
 
 #
@@ -42,6 +53,7 @@ end
 get '/user/:id' do
   @user = User.get(params[:id])
   if @user
+    auth
     haml :user_profile
   else
     redirect '/'
@@ -61,4 +73,13 @@ post '/user/:id/settings' do
    @user = User.get(params[:id])
    @user.update(params[:user])
    redirect "/user/#{@user.id}"
+end
+
+helpers do
+  def is_user?
+    session[:logged] == @user.username
+  end
+  def auth
+    redirect "/" unless is_user?
+  end
 end
