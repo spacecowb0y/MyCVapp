@@ -1,0 +1,26 @@
+#signup.join
+  %h2
+    Sign up to
+    = succeed "app" do
+      %strong mycv
+  %p
+    Do you have an account already?
+    %a{:href => "/login", :title => "Login" } Sign In
+  %form{"accept-charset" => "utf-8", :action => "/signup", :method => "post"}
+    %fieldset
+      %p.first
+        %label{:for => "email"} Email
+        %span
+          %input#email.required.email{:name => "user[email]", :type => "text", :value => ""}/
+      %p
+        %label{:for => "password"} Password
+        %span
+          %input#password.required{:name => "user[password]", :type => "password", :value => ""}/
+      %p
+        %label{:for => "username"} Username
+        %span
+          %input#username.required{:name => "user[username]", :type => "text", :value => ""}/
+          %small Your public name
+      %p.last
+        %button{:type => "submit"} Sign Up
+/ /login

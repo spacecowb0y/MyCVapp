@@ -19,52 +19,24 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   %body
-    #top
-      %ul.right
-        %li
-          %a{:href => "", :title => ""} Save + Close
-        %li
-          %a{:href => "", :title => ""} Save
-        %li
-          %a{:href => "", :title => ""} Cancel
     #header
       %ul#navigation
         %li 
           Welcome back 
-          %strong #{params[:username]}
+          %strong #{@user.username}
         %li
-          %a{:href => "/user/#{params[:username].downcase}"} My Profile
+          %a{:href => "/user/#{params[:id]}"} My Profile
         %li
-          %a{:href => "/user/#{params[:username].downcase}/settings"} Settings
+          %a{:href => "/user/#{params[:id]}/settings"} Settings
         %li
-          %a{:href => "/logout"} Logout
+          %a{:href => "/user/#{params[:id]}/logout"} Logout
       %h1#logo
         %a{:href => "/", :title => ""} MyCVapp
     / /header
     #container
-      #profile_header
-        #profile_image
-          %img{:alt => "diego_ar", :src => "http://a1.twimg.com/profile_images/1121793305/IMG_0834_reasonably_small.jpg", :width => '80'}
-        / /profile_image
-        #profile_details
-          %h4 #{params[:username].downcase}
-          %p
-            %strong Diego Alejandro Peralta
-            , 20, Male, Argentina
-          %p
-            %a{:href => ""} http://www.bahiastudio.net
-          %p
-            %a.twitter{:href => ""} @diego_ar
-            %a.facebook{:href => ""} dperalta
-        / /profile_details
-      / /profile_header
-      #user_profile
-        %h2 Your resumes
-        %p.info
-          You don't have any resume to display yet. Do you want to create one? 
-          %a{:href => ""} Click here
-        %h2 Your profile visits
-        #stats
+    
+      = yield
+    
     #footer
       %ul
         %li

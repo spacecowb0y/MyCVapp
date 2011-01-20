@@ -7,6 +7,11 @@ Just do:
   
 (You have bundler, right?)
 
+Requirements
+====================
+
+LinkedIn API key.
+
 Running instructions
 ====================
 

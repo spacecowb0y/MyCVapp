@@ -1,20 +1,12 @@
-source :gemcutter
-gem 'sinatra', '1.1.0'
-gem 'haml', '3.0.23'
-gem 'gravatar'
+source "http://rubygems.org"
+
+gem 'sinatra'
+gem 'haml'
 gem 'dm-core'
 gem 'dm-migrations'
 gem 'dm-validations'
 gem 'dm-timestamps'
-gem 'dm-sqlite-adapter'
+gem 'dm-mysql-adapter'
 gem 'shotgun'
 gem 'thor'
-
-# If you get some errors about installing the postgres adapter, do:
-#
-#   bundle install --without postgre
-#
-group :postgre do
-  # Heroku uses postgres
-  gem 'dm-postgres-adapter'
-end
+gem 'linkedin'

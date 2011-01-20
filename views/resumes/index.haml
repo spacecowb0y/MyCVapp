@@ -1,0 +1,116 @@
+!!! Strict
+%html
+  %head
+    %title Jonathan Doe | Web Designer, Director | name@yourdomain.com
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "content-type"}/
+    %meta{:content => "", :name => "keywords"}/
+    %meta{:content => "", :name => "description"}/
+    %link{:href => "http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/css/resume.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+  %body
+    
+    #doc2.yui-t7
+      #inner
+        #hd
+          .yui-gc
+            .yui-u.first
+              %h1 #{@profile.first_name} #{@profile.last_name}
+              %h2 #{@profile.headline}
+            .yui-u
+              .contact-info
+                %h3
+                  %a#pdf{:href => "#"} Download PDF
+                %h3
+                  %a{:href => "mailto:name@yourdomain.com"} name@yourdomain.com
+                %h3 (313) - 867-5309
+              / // .contact-info
+          / // .yui-gc
+        / // hd
+        #bd
+          #yui-main
+            .yui-b
+              .yui-gf
+                .yui-u.first
+                  %h2 Profile
+                .yui-u
+                  %p.enlarge
+                    Progressively evolve cross-platform ideas before impactful infomediaries. Energistically visualize tactical initiatives before cross-media catalysts for change.
+              / // .yui-gf
+              .yui-gf
+                .yui-u.first
+                  %h2 Skills
+                .yui-u
+                  .talent
+                    %h2 Web Design
+                    %p Assertively exploit wireless initiatives rather than synergistic core competencies.
+                  .talent
+                    %h2 Interface Design
+                    %p Credibly streamline mission-critical value with multifunctional functionalities.
+                  .talent
+                    %h2 Project Direction
+                    %p Proven ability to lead and manage a wide variety of design and development projects in team and independent situations.
+              / // .yui-gf
+              .yui-gf
+                .yui-u.first
+                  %h2 Technical
+                .yui-u
+                  %ul.talent
+                    %li XHTML
+                    %li CSS
+                    %li.last Javascript
+                  %ul.talent
+                    %li Jquery
+                    %li PHP
+                    %li.last CVS / Subversion
+                  %ul.talent
+                    %li OS X
+                    %li Windows XP/Vista
+                    %li.last Linux
+              / // .yui-gf
+              .yui-gf
+                .yui-u.first
+                  %h2 Experience
+                / // .yui-u
+                .yui-u
+                  .job
+                    %h2 Facebook
+                    %h3 Senior Interface Designer
+                    %h4 2005-2007
+                    %p Intrinsicly enable optimal core competencies through corporate relationships. Phosfluorescently implement worldwide vortals and client-focused imperatives. Conveniently initiate virtual paradigms and top-line convergence.
+                  .job
+                    %h2 Apple Inc.
+                    %h3 Senior Interface Designer
+                    %h4 2005-2007
+                    %p Progressively reconceptualize multifunctional "outside the box" thinking through inexpensive methods of empowerment. Compellingly morph extensive niche markets with mission-critical ideas. Phosfluorescently deliver bricks-and-clicks strategic theme areas rather than scalable benefits.
+                  .job
+                    %h2 Microsoft
+                    %h3 Principal and Creative Lead
+                    %h4 2004-2005
+                    %p Intrinsicly transform flexible manufactured products without excellent intellectual capital. Energistically evisculate orthogonal architectures through covalent action items. Assertively incentivize sticky platforms without synergistic materials.
+                  .job.last
+                    %h2 International Business Machines (IBM)
+                    %h3 Lead Web Designer
+                    %h4 2001-2004
+                    %p Globally re-engineer cross-media schemas through viral methods of empowerment. Proactively grow long-term high-impact human capital and highly efficient innovation. Intrinsicly iterate excellent e-tailers with timely e-markets.
+                / // .yui-u
+              / // .yui-gf
+              .yui-gf.last
+                .yui-u.first
+                  %h2 Education
+                .yui-u
+                  %h2 Indiana University - Bloomington, Indiana
+                  %h3
+                    Dual Major, Economics and English —
+                    %strong 4.0 GPA
+              / // .yui-gf
+            / // .yui-b
+          / // yui-main
+        / // bd
+        #ft
+          %p
+            #{@profile.first_name} #{@profile.last_name} —
+            %a{:href => "mailto:name@yourdomain.com"} name@yourdomain.com
+            \— (313) - 867-5309
+        / // footer
+      / // inner
+    / // doc

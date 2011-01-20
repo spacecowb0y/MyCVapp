@@ -1,0 +1,12 @@
+#profile_header
+#user_profile
+  %h2 Your resumes
+  %p.info
+    You don't have any resume to display yet. Do you want to create one from scratch? 
+    %a{:href => ""} Click here.
+    %br
+    Or you can import your information from Linkedin:
+    %a.button{:href => "/user/#{params[:id]}/auth"}
+      %img{:src => "/images/connect-with-linkedin.png", :alt => "Import my info from Linkedin"}
+  %h2 Your profile visits
+  #stats

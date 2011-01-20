@@ -1,0 +1,25 @@
+#login.join
+  %h2
+    Login in to
+    = succeed "app" do
+      %strong mycv
+  %p
+    You don't have an account?
+    %a{:href => "/signup", :title => "Sign Up" } Get one in 5 seconds!
+  %form{"accept-charset" => "utf-8", :action => "/login", :method => "post"}
+    %fieldset
+      %p.first
+        %label{:for => "username"} Username
+        %span
+          %input#username{:name => "user[username]", :type => "text", :value => ""}/
+      %p
+        %label{:for => "password"} Password
+        %span
+          %input#password{:name => "user[password]", :type => "password", :value => ""}/
+          %a{:href => "/reset-password"} Forgot your password?
+      %p.last
+        %small
+          %input#remember{:name => "remember", :type => "checkbox"}/
+          %label{:for => "remember"} Remember me on this computer
+        %button{:type => "submit"} Login
+/ /login

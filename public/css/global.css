@@ -92,9 +92,6 @@ body {
 	color:#868686;
 	font:12px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-body.editor-mode {
-	padding:40px 0 0;
-}
 :focus {
 	outline:0;
 }
@@ -279,7 +276,7 @@ strong {
 	width:620px;
 }
 #screenshots .box {
-	background:url('../images/zoom.png') no-repeat center 35px;
+	background:url('../images/zoom.png') no-repeat center center;
 	float:left;
 	margin:0 65px 0 0;
 }
@@ -541,6 +538,7 @@ label.error { display:none !important; }
 	width:200px;
 }
 
+
 /*------------------------------*/
 /* FOOTER 						*/
 /*------------------------------*/
@@ -563,9 +561,17 @@ label.error { display:none !important; }
 .info {
 	background-color:#EDEFF4;
 	border:1px solid #D4DAE8;
-	font-size:11px;
+	font-size:18px;
+	font-weight:300;
+	line-height:1.4em;
 	margin:-1.5em 0 4em;
-	padding:8px;
+	padding:12px;
+	text-align:center;
+}
+
+.info a.button {
+	display:block;
+	margin:12px auto 0;
 }
 
 /*- End of General Styles ----------------------------------------------------*/

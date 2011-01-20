@@ -1,0 +1,78 @@
+#featured
+  #featured_holder
+    #description
+      %h3 Easy, super fast and free!
+      %p
+        With MyCVapp you can create your resume online in 3 minutes or less! It's so simple to use, it's fun, it's fast and the best part
+        = succeed "!" do
+          %strong  it's completly free 
+      %p
+        %a#signup{:href => "/signup", :title => "Sign in up for mycvapp"}
+          Sign in up for mycvapp
+          %small Sign in up for mycvapp and get your resume online in 3 minutes
+    / /description
+    #image
+      %img{:alt => "MyCVapp", :src => "/images/featured_home.png"}/
+    / /image
+  / /featured_holder
+/ /featured
+#about
+  %dl#what_is
+    %dt
+      what is
+      = succeed "app?" do
+        %strong mycv
+    %dd MyCVapp it's a open-source online tool to easy create your resume, export it to PDF or share it with your friends on Facebook or Twitter.
+  %dl#who_uses
+    %dt
+      who uses
+      = succeed "pp?" do
+        %strong mycva
+    %dd Everybody! If you need to create your resume, MyCVapp it's the best online tool to do it. It's simple, fun and so fast!
+  %dl#how_much.last
+    %dt
+      how much cost
+      = succeed "app?" do
+        %strong mycv
+    %dd MyCVapp it's completly free! You don't need to pay anything! The only thing that you need to do it's sign up and thats it!
+/ /about
+#content
+  #screenshots
+    .box
+      %a{:href => ""}
+        %img{:alt => "", :src => "/images/screenshots/1.jpg"}/
+        %strong Beautiful and clean UI
+    / /box
+    .box
+      %a{:href => ""}
+        %img{:alt => "", :src => "/images/screenshots/1.jpg"}/
+        %strong Easy method to update info
+    / /box
+    .box.last
+      %a{:href => ""}
+        %img{:alt => "", :src => "/images/screenshots/1.jpg"}/
+        %strong Export or share your CV
+    / /box
+  / /screenshots
+  #testimonials
+    %ul
+      %li
+        %cite
+          %span "
+          Before Akismet I was spending more time deleting spam than creating content.
+          %span "
+        %strong - Sarah King
+      %li
+        %cite
+          %span "
+          Before Akismet I was spending more time deleting spam than creating content.
+          %span "
+        %strong - Sarah King
+      %li
+        %cite
+          %span "
+          Before Akismet I was spending more time deleting spam than creating content.
+          %span "
+        %strong - Sarah King
+  / /testimonials
+/ /content
